@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <TodoHeader></TodoHeader>
-    <Todo-Input v-on:addTodo="addTodo"></todo-input>
+    <TodoInput v-on:addTodo="addTodo"></todoInput>
     <TodoList v-bind:propsdata="todoItems" @removeTodo="removeTodo"></TodoList>
     <Todo-footer v-on:removeAll="clearAll"></Todo-footer>
   </div>
@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     addTodo(todoItem){
-      localStorage.setItem(value, value);
+      localStorage.setItem(todoItem, todoItem);
       this.todoItems.push(todoItem);
     },
     clearAll() {
